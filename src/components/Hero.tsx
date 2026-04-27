@@ -1,7 +1,12 @@
+// Import necessary dependencies
 import heroBg from './HeroHD.png';
 
-const Hero = () => {
-    // Your component code here
-};
+function Hero() {
+  return (
+    <div style={{ backgroundImage: `url(${heroBg})` }}>
+      <h1>Welcome to Our Site</h1>
+    </div>
+  );
+}
 
 export default Hero;
