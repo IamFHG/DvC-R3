@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import heroBg from './HeroHD.png';
+const heroBg = new URL('./HeroHD.png', import.meta.url).href;
 import { Truck, Headphones, ShieldCheck, Gift } from 'lucide-react';
 
 const features = [
