@@ -29,10 +29,11 @@ export default function Hero() {
   return (
     <section id="home" className="relative w-full aspect-[1136/944] max-h-[944px] overflow-hidden flex flex-col justify-between pt-[15%] md:pt-[20%] pb-[5%] md:pb-0">
       {/* Background Image */}
-      <div 
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
-      />
+      <img
+  src={heroBg}
+  alt="Hero Background"
+  className="absolute inset-0 w-full h-full object-cover z-0"
+/>
       
       {/* Dark Overlay for Content Readability */}
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#0d1e12]/80 via-[#0d1e12]/20 to-transparent w-full md:w-[63%] md:bg-[#0d1e12] h-full" />
