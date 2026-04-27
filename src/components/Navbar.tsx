@@ -34,10 +34,10 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="absolute top-0 left-0 w-full z-[100] px-4 md:px-12 py-0 flex items-center justify-between pointer-events-none translate-y-4 md:translate-y-0">
+    <nav className="absolute top-0 left-0 w-full z-[100] px-[6%] md:px-12 py-0 flex items-center justify-between pointer-events-none translate-y-[2%] md:translate-y-0">
       {/* Brand / Logo */}
       <div className="flex flex-col items-center pointer-events-auto">
-        <div className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] bg-[#0d1e12] border border-white/10 flex items-center justify-center shadow-2xl overflow-hidden">
+        <div className="w-[clamp(36px,9vw,100px)] h-[clamp(36px,9vw,100px)] bg-[#0d1e12] border border-white/10 flex items-center justify-center shadow-2xl overflow-hidden">
           <img 
              src={siteLogo} 
              alt="Bonsai Logo" 
@@ -48,7 +48,7 @@ export default function Navbar() {
       </div>
 
       {/* Navigation Links - Persistent */}
-      <ul className="flex items-center gap-4 md:gap-12 text-[clamp(8px,1vw,10px)] font-bold tracking-[0.15em] md:tracking-[0.3em] uppercase text-white/80 pointer-events-auto md:mt-6">
+      <ul className="flex items-center gap-[1.2vw] md:gap-12 text-[clamp(5px,0.9vw,10px)] font-bold tracking-tight md:tracking-[0.3em] uppercase text-white/80 pointer-events-auto md:mt-6">
         {menuItems.map((item) => (
           <li key={item.label}>
             <button 
@@ -69,9 +69,9 @@ export default function Navbar() {
             placeholder="Search..." 
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="bg-[#243b2a]/40 text-[clamp(8px,1vw,12px)] pl-7 md:pl-10 pr-2 md:pr-12 py-1.5 md:py-3 rounded-sm focus:outline-none border border-white/5 w-24 md:w-64 transition-all placeholder:text-white/30 focus:bg-[#243b2a]/60"
+            className="bg-[#243b2a]/40 text-[clamp(6px,1vw,12px)] pl-[4vw] md:pl-10 pr-1 md:pr-12 py-[0.6vw] md:py-3 rounded-sm focus:outline-none border border-white/5 w-[11vw] md:w-64 transition-all placeholder:text-white/30 focus:bg-[#243b2a]/60"
           />
-          <Search className="absolute left-2 md:left-3 top-1/2 -translate-y-1/2 w-3 md:w-4 h-3 md:h-4 text-white/40" />
+          <Search className="absolute left-[1vw] md:left-3 top-1/2 -translate-y-1/2 w-[1.8vw] md:w-4 h-[1.8vw] md:h-4 text-white/40" />
           <div className="hidden md:flex absolute right-2 top-1/2 -translate-y-1/2 items-center justify-center w-8 h-8 bg-white/5 rounded-sm">
              <ShoppingBag className="w-4 h-4 text-white/60" />
           </div>
